@@ -31,11 +31,28 @@
 </template>
 
 <script>
+// import gql from 'graphql-tag'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  // data() {
+  //   return {
+  //     me: null
+  //   }
+  // },
+  // apollo: {
+  //   me: gql`query {
+  //     me {
+  //       id
+  //       name
+  //       email
+  //     }
+  //   }
+  //   `
+  // }
 }
 </script>
 

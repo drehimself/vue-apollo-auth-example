@@ -2,11 +2,27 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/login">Login</router-link> |
+      <a href="#" @click.prevent="logout">Logout</a>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import { onLogout } from './vue-apollo.js'
+
+export default {
+  methods: {
+    logout() {
+      onLogout(this.$apollo.provider.defaultClient)
+      this.$router.push('/')
+    }
+  }
+}
+</script>
+
 
 <style>
 #app {
